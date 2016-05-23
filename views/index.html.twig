@@ -1,0 +1,18 @@
+{% extends "layout.html.twig" %} {% block title %}Home{% endblock %} {% block content %}
+
+<body>
+    <div class="container">
+
+        <h1 class="text-center"><span class="glyphicon glyphicon-music">AllForMusic</span><span class="glyphicon glyphicon-music"></h1>
+        <div class="row">
+
+            {% for category in categorys %}
+            <div class="col-xs-4 col-sm-4 col-md-3">
+                <h3 align="center"><a class="thumbnail" href="{{ path('category', { 'cat': category.name }) }}"><img src="{{app.request.basepath}}/images/{{category.id}}.jpg"></a>{{ category.name }}</h3>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</body>
+{% endblock %}
