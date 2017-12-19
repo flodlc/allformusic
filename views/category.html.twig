@@ -2,13 +2,14 @@
 
 <body>
     <div class="container">
+        <h1>{{ cat }}</h1>
         <div class="row">
 
             {% for article in articles %}
-            <div class="col-xs-4 col-sm-4 col-md-3">
+            <div style="margin-top: 50px;" class="col-xs-4 col-sm-4 col-md-3">
                 <a class="thumbnail" href="{{ path('article', { 'id': article.id }) }}"><img src="{{app.request.basepath}}/images/{{article.id}}.jpg"></a>
                 <p>{{ article.name }}</p>
-                <h3 class="text-right" style="color: Red;"> {{ article.price }} €</h3>
+                <h3 class="text-right" style="color: Navy;"> {{ article.price }} €</h3>
             </div>
             {% endfor %}
 

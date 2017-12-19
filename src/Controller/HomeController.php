@@ -23,7 +23,7 @@ class HomeController {
     
     public function categoryAction($cat, Application $app) {
     $articles = $app['dao.article']->findCat($cat);
-    return $app['twig']->render('category.html.twig', array('articles' => $articles));
+    return $app['twig']->render('category.html.twig', array('articles' => $articles, 'cat' => $cat));
     }
     
     public function loginAction(Request $request, Application $app) {

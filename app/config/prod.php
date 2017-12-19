@@ -7,6 +7,6 @@ $app['db.options'] = array(
     'host'     => 'localhost',
     'port'     => '3306',
     'dbname'   => 'allformusic',
-    'user'     => 'allformusic_user',
-    'password' => 'secret',
+    'user'     => 'root',
+    'password' => null,
 );
